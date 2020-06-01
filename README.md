@@ -1,12 +1,13 @@
 # i3autofloat
 
-Hack that makes I3 "remeber" when an application is toggled to floating mode
+Hack that makes I3 "remeber" when an application is toggled in or out of floating mode
 
 ## USE
-before anything make a copy of your i3 config file somewhere safe.  
-this is quick hack that I made for myself. it has been minimally tested. 
-It might not be the most elegant, but works great in my system.
-Ping me if you need help.
+Before anything make a copy of your i3 config file somewhere safe.  
+this is quick hack that I made for myself.   
+It has been minimally tested, so might be broken.  
+It might not be the most elegant, but works great in my system.  
+Ping me if you need help.  
  
 - place this script on a folder in your PATH, 
 - make it executable > chmod u+x [path/to/the/script]
