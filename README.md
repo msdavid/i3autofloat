@@ -5,7 +5,7 @@ Hack that makes I3 "remeber" when an application is toggled in or out of floatin
 ## USE
 Before anything make a copy of your i3 config file somewhere safe.  
 This is quick hack that I made for myself. It has been minimally tested and possibly buggy.  
-It might not be the most elegant, but works great for me
+It might not be the most elegant, but works great for me.  
 Ping me if you need help.  
  
 - place this script on a folder in your PATH, 
