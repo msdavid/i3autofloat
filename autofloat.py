@@ -1,12 +1,24 @@
 #!/usr/bin/python3
 
-## USE:
+## USE
 ## place this script on a folder in your PATH, 
 ## make it executable > chmod u+x <path to the script> 
 ## make sure all the paths are correct in the constants bellow
-## aad the following keybind to ~/.config/i3/config
+## add the following keybind to ~/.config/i3/config
 ## bindsym $mod+Shift+space floating toggle; exec $HOME/bin/autofloat.py
-## replace the location of your bin folder in the above line
+## replace the location of your bin folder in the above line if needed
+
+#LICENSE
+
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# version 2 as published by the Free Software Foundation.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
 
 from subprocess import Popen, PIPE
 from os import environ
@@ -32,7 +44,7 @@ def removefloat(wmclass):
 
 
 def get_active_window_class():
-    """Returns the windo class of the active window"""
+    """Returns the wm_class of the active window"""
     cmd = [XPROP, "-root", "32x", "'\t$0'", "_NET_ACTIVE_WINDOW"]
     output = Popen(cmd,stdout=PIPE).communicate()
     window_id = output[0].split()[1]
@@ -43,6 +55,7 @@ def get_active_window_class():
     output = output.strip().replace('"',"")
     return output
 
+#read current config
 conf = open(I3CONFIG).readlines()
 floating = [l.split()[-1] for l in conf if "##autofloat##" in l] 
 
